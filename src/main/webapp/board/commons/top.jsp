@@ -5,13 +5,13 @@
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                 <div class="container-fluid">
                     <!-- 회사로고(logo) -->
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="../board/listT.jsp">
                         <img src="https://www.ikosmo.co.kr/images/common/logo_center_v2.jpg" style="width: 120px;">
                     </a>
                     <!-- GNB(Global Navigation Bar : 해당 웹사이트의 전체(global) 메뉴) -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">자유게시판</a>
+                            <a class="nav-link active" href="../board/listT.jsp">자유게시판</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">자료실</a>
@@ -35,6 +35,9 @@
                     </div>
                     </form>
                     <!-- 회원가입/로그인 링크 -->
+<%
+if(session.getAttribute("UserId")==null){
+%>
                     <ul class="navbar-nav">
                         <!-- 로그인전 -->
                         <li class="nav-item">
@@ -44,25 +47,32 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="../member/Login.jsp">
                                 <i class="bi-box-arrow-in-right" style="font-size: 1rem;"></i>
                                 로그인
                             </a>
                         </li>
+<%
+}
+else{
+%>
                         <!-- 로그인후 -->
-                        <!-- <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="bi-person-lines-fill" style="font-size: 1rem;"></i>
                                 회원정보수정
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="../member/Logout.jsp">
                                 <i class="bi-box-arrow-right" style="font-size: 1rem;"></i>
                                 로그아웃
                             </a>
-                        </li> -->
+                        </li>
                     </ul>
+<%
+}
+%>
                 </div>
             </nav>
         </div>

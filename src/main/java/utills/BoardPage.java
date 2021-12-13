@@ -15,10 +15,16 @@ public class BoardPage {
 		int pageTemp = (((pageNum-1)/blockPage)*blockPage)+1; //1
 		//이전블럭으로 바로가기 링크(첫번째 블럭에는 숨김처리)
 		if(pageTemp!=1) {
-			pagingStr += "<a href='" + reqUrl + "?pageNum=1'>[첫페이지]</a>";
-			pagingStr += "&nbsp;";
-			pagingStr += "<a href='" + reqUrl + "?pageNum=" + (pageTemp-1)
-					+"'>[이전블록]</a>";
+			pagingStr += "<li class='page-item'>"
+					+ "<a class='page-link' href='" + reqUrl + "?pageNum=1'>"
+					+ "<i class='bi bi-skip-backward-fill'></i></a></li>";
+					//+ "<a href='" + reqUrl + "?pageNum=1'>[첫페이지]</a>";
+			
+			//pagingStr += "&nbsp;";
+			pagingStr += "<li class='page-item'>"
+					+ "<a class='page-link' href='" + reqUrl + "?pageNum=" + (pageTemp-1)+"'>"
+					+ "<i class='bi bi-skip-start-fill'></i></a></li>";
+					//"<a href='" + reqUrl + "?pageNum=" + (pageTemp-1)+"'>[이전블록]</a>";
 			
 		}
 		

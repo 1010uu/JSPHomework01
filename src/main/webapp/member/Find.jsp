@@ -32,14 +32,14 @@
         $('#idFind').click(function(){
             $('#item01').hide();
             $('#item02').show();
-            $('#item03').show();
+            //$('#item03').show();
             //$('#item04').show();
             //$('#item05').hide();
         });
         $('#pwFind').click(function(){
             $('#item01').show();
             $('#item02').show();
-            $('#item03').show();
+            //$('#item03').show();
             //$('#item04').show();
             //$('#item05').hide();
         });
@@ -54,9 +54,11 @@
             }
         });
     });
+ 
     </script>
 </head>
 <body>
+
 <div id="AllWrap">
     <h2>아이디/비밀번호 찾기</h2>
     <div id="RadioBox">
@@ -64,6 +66,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
         <input type="radio" name="find" id="pwFind">비밀번호찾기
     </div>
+    <form name="findForm" id="findForm" method="post" action="FindProcess.jsp">
     <div id="IdBox" class="">
         <table align="center" id="InputTable">
             <colgroup>
@@ -73,7 +76,7 @@
             <tr id="item01" style="display:none;">
                 <th><span class="bullet">&gt;</span><strong>아 이 디</strong></th>
                 <td>
-                    <input type="text" name="name" style="width:200px;">
+                    <input type="text" name="id" style="width:200px;">
                 </td>
             </tr>
             <tr id="item02">
@@ -82,13 +85,13 @@
                     <input type="text" name="name" style="width:200px;">
                 </td>
             </tr>
-            <tr id="item03">
-                <th>
+            <!-- <tr id="item03">
+                 <th>
                     <span class="bullet">&gt;</span><select id="choice">
                         <option value="mobile" selected>휴대전화</option>
                         <option value="email">이메일</option>
                     </select>
-                </th>
+                </th> 
                 <td>
                     <div id="item04">
                         <input type="text" name="mobile1" style="width:40px;" maxlength="3"> -
@@ -109,7 +112,7 @@
                         </select>
                     </div>
                 </td>
-            </tr>
+            </tr> -->
         </table>
         <div>
             <img src="./images/g_line.gif" width="400" height="1" border="0" />
@@ -117,10 +120,14 @@
             아이디를 찾기 위해서 이름과 휴대번호 혹은 이메일을 입력하세요.
             <br><br><br>
         </div>
-    </div>    
+    </div> 
+    
     <div style="margin-top:20px;">
-        <input type="button" value="아이디 찾기 &gt;" id="btn">
+        <input type="submit" value="아이디 찾기 &gt;" id="btn" >
     </div>
+   
+    
 </div>
+</form>
 </body>
 </html>

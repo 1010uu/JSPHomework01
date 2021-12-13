@@ -31,6 +31,7 @@ if(memberDTO.getId()!=null){ //회원 인증(로그인)에 성공한 경우
 	session.setAttribute("UserId", memberDTO.getId());
 	session.setAttribute("UserName", memberDTO.getName());
 	
+	
 	//페이지 이동
 	response.sendRedirect("../board/listT.jsp");
 }
