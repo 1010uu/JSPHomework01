@@ -90,7 +90,6 @@ dao.close();
                         <th>첨부</th>
                     </tr>
                 </thead>
-
                 <tbody>
 <%
 if(boardLists.isEmpty())
@@ -153,21 +152,21 @@ else{
                 </div>
             </div>
             <!-- 페이지 번호 -->
-            <div class="row mt-3">
-            
-             
+            <div class="row mt-3">     
                 <div class="col">		
                     <ul class="pagination justify-content-center">
+                    
                     <%= BoardPage.pagingStr(totalCount, 
         				pageSize, blockPage, 
         				pageNum, request.getRequestURI()) %> 
-                        <!-- <li class="page-item"><a class="page-link" href="#">
+        				
+                       <!-- <li class="page-item"><a class="page-link" href="#">
                             <i class='bi bi-skip-backward-fill'></i>
-                        </a></li>  -->
+                        </a></li>
                         
-                        <!-- <li class="page-item"><a class="page-link" href="#">
+                        <li class="page-item"><a class="page-link" href="#">
                             <i class='bi bi-skip-start-fill'></i>
-                        </a></li> -->
+                        </a></li>
                        
                         <li class="page-item active"><a class="page-link" href="#">1</a></li>
                         
@@ -181,7 +180,7 @@ else{
                         
                         <li class="page-item"><a class="page-link" href="#">
                             <i class='bi bi-skip-forward-fill'></i>
-                        </a></li>
+                        </a></li> -->
                     </ul>
                 </div>
             </div>
