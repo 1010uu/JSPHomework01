@@ -23,11 +23,10 @@ BoardDAO dao = new BoardDAO(application);
 int iResult = dao.insertWrite(dto);
 
 /*더미데이터 100개를 한번에 입력하기*/
-/*int iResult = 0;
+/* int iResult = 0;
 for(int i=1; i<=100; i++){
 	dto.setTitle(title+"-"+i);
-	iResult = dao.insertWrite(dto);
-}*/
+	iResult = dao.insertWrite(dto); */
 
 //자원해제
 dao.close();
